@@ -146,14 +146,14 @@ export function QuickSearchModal({ isOpen, onClose }: QuickSearchModalProps) {
   return (
     <>
       <div
-        className="fixed inset-0 z-50 flex items-start justify-center pt-8 sm:pt-12 px-3 sm:px-4 bg-slate-950/65 backdrop-blur-md animate-in fade-in duration-200 cursor-pointer"
+        className="fixed inset-0 z-50 flex items-start justify-center pt-8 sm:pt-12 px-3 sm:px-4 bg-slate-950/65 backdrop-blur-md animate-backdrop-in cursor-pointer"
         onClick={onClose}
       >
-        {/* Simple & Clean Search Card */}
+        {/* Simple & Clean Search Card with Spring Animation */}
         <div
           role="dialog"
           aria-modal="true"
-          className="relative w-full max-w-xl bg-white dark:bg-[#111827] rounded-2xl sm:rounded-3xl shadow-2xl border-2 border-slate-300 dark:border-slate-700 overflow-hidden cursor-default flex flex-col max-h-[80vh] transition-all animate-in zoom-in-95 duration-150"
+          className="relative w-full max-w-xl bg-white dark:bg-[#111827] rounded-2xl sm:rounded-3xl shadow-2xl border-2 border-slate-300 dark:border-slate-700 overflow-hidden cursor-default flex flex-col max-h-[80vh] animate-search-open"
           onClick={(e) => e.stopPropagation()}
         >
           {/* 1. Ultra-Clean Search Input Bar */}
@@ -186,21 +186,23 @@ export function QuickSearchModal({ isOpen, onClose }: QuickSearchModalProps) {
                   setQuery("");
                   inputRef.current?.focus();
                 }}
-                className="p-1 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                className="w-6 h-6 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors cursor-pointer shrink-0"
                 title={t.clearQuery}
+                aria-label={t.clearQuery}
               >
-                <X className="w-4 h-4" />
+                <X className="w-3.5 h-3.5" />
               </button>
             )}
 
-            {/* ESC Badge */}
+            {/* Close Button ("Nút tắt") */}
             <button
               type="button"
               onClick={onClose}
-              className="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors cursor-pointer shrink-0"
-              title={t.closeEsc}
+              className="p-1.5 rounded-xl text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer shrink-0 active:scale-95"
+              title={isEn ? "Close search (Esc)" : "Đóng tìm kiếm (Esc)"}
+              aria-label="Close"
             >
-              ESC
+              <X className="w-5 h-5 stroke-[2.2]" />
             </button>
           </div>
 
