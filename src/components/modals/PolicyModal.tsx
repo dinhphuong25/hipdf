@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Mail,
   CheckCircle2,
-  ExternalLink,
   Send,
 } from "lucide-react";
 import { useAppStore } from "@/lib/store/useAppStore";
@@ -258,25 +257,11 @@ export function PolicyModal() {
             </div>
 
             {/* Intro text */}
-            <p className="text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+            <p className="text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
               {isVi
                 ? "Hi PDF luôn lắng nghe mọi ý kiến đóng góp, đề xuất tính năng mới hoặc báo lỗi từ bạn:"
                 : "We welcome all feedback, feature suggestions, and bug reports:"}
             </p>
-
-            {/* Creator info link */}
-            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3.5 pb-2.5 border-b border-slate-100 dark:border-white/10">
-              <span>{isVi ? "Phát triển bởi" : "Developed by"} <strong className="text-slate-800 dark:text-slate-200">Kim Đình Phương</strong> (Hi Tech)</span>
-              <a
-                href="https://www.facebook.com/dinhphuong205"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-[#0284C7] dark:text-[#38BDF8] hover:underline font-semibold"
-              >
-                <span>Facebook</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
 
             {/* Contact Form */}
             <form onSubmit={handleContactSubmit} className="space-y-3">
