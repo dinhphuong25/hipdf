@@ -332,7 +332,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       ],
     },
     footer: {
-      tagline: "Nền tảng xử lý PDF bảo mật phi lợi nhuận.",
+      tagline: "Công cụ PDF trực tuyến miễn phí.",
       contact: "Liên Hệ",
       terms: "Điều Khoản",
       privacy: "Bảo Mật",
@@ -535,7 +535,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       ],
     },
     footer: {
-      tagline: "Non-profit secure PDF processing platform.",
+      tagline: "Free online PDF tools.",
       contact: "Contact",
       terms: "Terms",
       privacy: "Privacy",
