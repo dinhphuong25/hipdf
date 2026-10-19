@@ -256,7 +256,7 @@ export function MasterHeroDropzone() {
   };
 
   return (
-    <section className="relative pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
+    <section className="relative pt-3 sm:pt-5 pb-14 sm:pb-20 overflow-hidden">
       {/* Ambient background glow for high-end SaaS feel with floating animations */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[460px] pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-gradient-to-b from-[#0284C7]/20 via-[#0284C7]/5 to-transparent blur-3xl rounded-full animate-float-slow" />
